@@ -1,3 +1,5 @@
+[![Build Status](https://www.travis-ci.com/sourabbapusridhar/handwritten-digit-generation-using-gans.svg?branch=master)](https://www.travis-ci.com/sourabbapusridhar)
+
 # Handwritten Digit Generation Using GANs
 
 The goal of this project is to generate images of digits using a Generative Adverserial Network (GANs). The network is trained and tested on the [MNIST dataset](http://yann.lecun.com/exdb/mnist/).
