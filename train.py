@@ -67,7 +67,7 @@ def main(configuration):
     trainer.train()
 
 if __name__ == "__main__":
-    args = argparse.ArgumentParser(description="Script to train handwritten digit recognition using CNNs")
+    args = argparse.ArgumentParser(description="Script to train handwritten digit generation using GANs")
     args.add_argument("-c", "--config", default=None, type=str, help="Path to the configuration file (Default: None)")
     args.add_argument("-r", "--resume", default=None, type=str, help="Path to the latest checkpoint (Default: None)")
     args.add_argument("-d", "--device", default=None, type=str, help="Index of the GPU used (Default: None)")
