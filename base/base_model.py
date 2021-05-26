@@ -7,21 +7,25 @@ from abc import abstractmethod, ABCMeta
 class BaseModel(nn.Module):
     """
     Base class implementation for all models. 
-    The class is inherited from nn.Module
+    The class is inherited from nn.Module.
     """
     def __str__(self):
         """
         Method to get the string representation of the object.
+        The method filters out parameters that have the attribute requires_grad set to TRUE and calculates the sum of all total number of parameters.
 
         Parameters
         ----------
-        self    : Instance of the class
+        self    : BaseModel
+                  Instance of the class
 
         Returns
         -------
-        string  : String representation of the class
+        string  : str
+                  String representation of the class
 
         """
+        # Calculate total number of trainable parameters for printing
         modelParameters = filter(lambda p: p.requires_grad, self.parameters())
         params = sum([np.prod(p.size()) for p in modelParameters])
 
@@ -35,12 +39,14 @@ class BaseModel(nn.Module):
 
         Parameters
         ----------
-        self    : Instance of the class
-        *inputs : Variable number of non-keyword arguments
+        self    : BaseModel
+                  Instance of the class
+
+        *inputs : tuple
+                  Variable number of non-keyword arguments
 
         Returns
         -------
         None
         """
-
         raise NotImplementedError
